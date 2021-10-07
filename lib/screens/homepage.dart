@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mtsk/constants/colors.dart';
+import 'package:mtsk/widgets/drawer/drawerwidget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,17 +17,21 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: const DrawerWidget(),
       body: Container(
         height: size.height,
         width: size.width,
         color: primaryColor,
-        padding: EdgeInsets.all(size.height * 0.05),
+        padding: EdgeInsets.only(
+            top: size.height * 0.05, left: 10, right: 10, bottom: 10),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Flexible(
+            /* Flexible(
               flex: 3,
               child: logoWidget(),
-            ),
+            ), */
             Flexible(
               flex: 5,
               child: menuWidet(),
@@ -58,7 +64,6 @@ class _HomePageState extends State<HomePage> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Container(
-        color: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,18 +72,21 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ustMenuItem(() {}, "Menü", Icons.ac_unit),
-                ustMenuItem(() {}, "Menü", Icons.ac_unit),
-                ustMenuItem(() {}, "Menü", Icons.ac_unit),
+                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home, Colors.red),
+                ustMenuItem(
+                    () {}, "Menü", FontAwesomeIcons.home, Colors.orange),
+                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home,
+                    Colors.green.shade800),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ustMenuItem(() {}, "Menü", Icons.ac_unit),
-                ustMenuItem(() {}, "Menü", Icons.ac_unit),
-                ustMenuItem(() {}, "Menü", Icons.ac_unit),
+                ustMenuItem(
+                    () {}, "Menü", FontAwesomeIcons.home, Colors.purple),
+                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home, Colors.green),
+                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home, Colors.cyan),
               ],
             ),
           ],
@@ -91,42 +99,162 @@ class _HomePageState extends State<HomePage> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Container(
-        color: Colors.yellow,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            qrItem(() {}, "QR Okut", FontAwesomeIcons.qrcode, Colors.black),
+            qrItem(() {}, "QR Yaz", FontAwesomeIcons.pencilAlt, Colors.black),
+          ],
+        ),
       ),
     );
   }
 
   Widget altmenuWidget() {
     return Container(
-      color: Colors.red,
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            altMenuItem(() {}, "Ana Sayfa", FontAwesomeIcons.home,
+                Colors.grey.shade700),
+            altMenuItem(() {}, "Hakkımızda", FontAwesomeIcons.info,
+                Colors.grey.shade700),
+            altMenuItem(() {}, "İletişim", FontAwesomeIcons.phone,
+                Colors.grey.shade700),
+            altMenuItem(() {}, "Çıkış", FontAwesomeIcons.powerOff,
+                Colors.grey.shade700),
+          ],
+        ),
+      ),
     );
   }
 
-  Widget ustMenuItem(Function()? onPressed, String text, IconData icon) {
+  Widget ustMenuItem(
+      Function()? onPressed, String text, IconData icon, Color color) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.width * 0.22,
-      width: size.width * 0.22,
+      height: size.width * 0.24,
+      width: size.width * 0.24,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: AutoSizeText(
-          text,
-          style: const TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
-          maxLines: 3,
-          maxFontSize: 18,
-          minFontSize: 12,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            FaIcon(
+              icon,
+              color: color,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: AutoSizeText(
+                text,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+                maxLines: 2,
+                maxFontSize: 18,
+                minFontSize: 12,
+              ),
+            ),
+          ],
         ),
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey.shade400, // background
+          primary: Colors.white, // background
           onPrimary: Colors.white, // foreground
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
           ),
           elevation: 15,
         ),
+      ),
+    );
+  }
+
+  Widget qrItem(
+      Function()? onPressed, String text, IconData icon, Color color) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      height: size.width * 0.36,
+      width: size.width * 0.36,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            FaIcon(
+              icon,
+              color: color,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: AutoSizeText(
+                text,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+                maxLines: 2,
+                maxFontSize: 18,
+                minFontSize: 12,
+              ),
+            ),
+          ],
+        ),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.white, // background
+          onPrimary: Colors.white, // foreground
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+          ),
+          elevation: 15,
+        ),
+      ),
+    );
+  }
+
+  Widget altMenuItem(
+      Function()? onPressed, String text, IconData icon, Color color) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      height: size.width * 0.20,
+      width: size.width * 0.20,
+      child: Column(
+        children: [
+          ElevatedButton(
+            onPressed: onPressed,
+            child: FaIcon(
+              icon,
+              color: color,
+            ),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white, // background
+              onPrimary: Colors.white, // foreground
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0),
+              ),
+              elevation: 15,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: AutoSizeText(
+              text,
+              style: const TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+              maxLines: 1,
+              maxFontSize: 16,
+              minFontSize: 10,
+            ),
+          ),
+        ],
       ),
     );
   }
