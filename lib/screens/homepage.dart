@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               child: logoWidget(),
             ), */
             Flexible(
-              flex: 5,
+              flex: 6,
               child: menuWidet(),
             ),
             Flexible(
@@ -65,17 +65,18 @@ class _HomePageState extends State<HomePage> {
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home, Colors.red),
-                ustMenuItem(
-                    () {}, "Menü", FontAwesomeIcons.home, Colors.orange),
-                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home,
+                ustMenuItem(() {}, "Araç Tekniği Dersi", FontAwesomeIcons.home,
+                    Colors.red),
+                ustMenuItem(() {}, "Direksiyon Eğitimi", FontAwesomeIcons.home,
+                    Colors.orange),
+                ustMenuItem(() {}, "Genel Bilgiler", FontAwesomeIcons.home,
                     Colors.green.shade800),
               ],
             ),
@@ -83,10 +84,24 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                ustMenuItem(() {}, "İlk Yardım Dersi", FontAwesomeIcons.home,
+                    Colors.purple),
+                ustMenuItem(() {}, "Trafik Adabı Dersi", FontAwesomeIcons.home,
+                    Colors.green),
+                ustMenuItem(() {}, "Trafik ve Çevre Dersi",
+                    FontAwesomeIcons.home, Colors.cyan),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ustMenuItem(() {}, "Trafik İşaretleri ve Levhalar",
+                    FontAwesomeIcons.home, Colors.purple),
                 ustMenuItem(
-                    () {}, "Menü", FontAwesomeIcons.home, Colors.purple),
-                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home, Colors.green),
-                ustMenuItem(() {}, "Menü", FontAwesomeIcons.home, Colors.cyan),
+                    () {}, "Soru Bankası", FontAwesomeIcons.home, Colors.green),
+                ustMenuItem(() {}, "İlk Yardım Dersi", FontAwesomeIcons.home,
+                    Colors.cyan),
               ],
             ),
           ],
@@ -136,8 +151,8 @@ class _HomePageState extends State<HomePage> {
       Function()? onPressed, String text, IconData icon, Color color) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.width * 0.24,
-      width: size.width * 0.24,
+      height: size.width * 0.25,
+      width: size.width * 0.25,
       child: ElevatedButton(
         onPressed: onPressed,
         child: Column(
@@ -156,9 +171,10 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
-                maxLines: 2,
-                maxFontSize: 18,
-                minFontSize: 12,
+                textAlign: TextAlign.center,
+                maxLines: 3,
+                maxFontSize: 17,
+                minFontSize: 10,
               ),
             ),
           ],
@@ -179,8 +195,8 @@ class _HomePageState extends State<HomePage> {
       Function()? onPressed, String text, IconData icon, Color color) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.width * 0.36,
-      width: size.width * 0.36,
+      height: size.width * 0.34,
+      width: size.width * 0.34,
       child: ElevatedButton(
         onPressed: onPressed,
         child: Column(
