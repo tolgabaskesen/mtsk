@@ -1,0 +1,25 @@
+{
+    "language_screen": {
+        "title": "Dil",
+        "cancel": "İptal"
+    },
+    "home_screen": {
+        "scan_barcode_button_text": "Barkod Okut",
+        "stop_video": "Videoyu Durdur",
+        "write_barcode": "Barkod Yaz",
+        "brands": "Markalar",
+        "info": "Hakkımızda",
+        "contact": "İletişim",
+        "web": "Web Sitemiz"
+    },
+    "drawer_widget": {
+        "language": "Dil",
+        "contact_us": "Bize Ulaşın"
+    },
+    "video_player": {
+        "cannot_play": "Böyle bir ürün bulunamadı.",
+        "scan_cannot_play": "Böyle bir ürün bulunamadı. Lütfen barkodu manuel girmeyi deneyin."
+        ,"ok": "Tamam"
+        
+    }
+}

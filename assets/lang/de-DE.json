@@ -1,0 +1,24 @@
+{
+    "language_screen": {
+        "title": "Sprache",
+        "cancel": "Stornieren"
+    },
+    "home_screen": {
+        "scan_barcode_button_text": "Barcode Scannen",
+        "stop_video": "Video Stoppen",
+        "write_barcode": "Manuell eintragen",
+        "brands": "Marken",
+        "info": "über uns",
+        "contact": "Kontakt",
+        "web": "Unsere Internetseite"
+    },
+    "drawer_widget": {
+        "language": "Sprache",
+        "contact_us": "Kontaktiere uns"
+    },
+    "video_player": {
+        "cannot_play": "Kein solches Produkt gefunden.",
+        "scan_cannot_play": "Kein solches Produkt gefunden. Bitte versuchen Sie, den Barcode manuell einzugeben.",
+        "ok": "OK"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "language_screen": {
+        "title": "Язык"
+        ,
+        "cancel": "отменить"
+    },
+    "home_screen": {
+        "scan_barcode_button_text": "Сканировать штрих-код",
+        "stop_video": "Остановить видео",
+        "write_barcode": "Введите вручную",
+        "brands": "Бренды",
+        "info": "о нас",
+        "contact": "Контакт",
+        "web": "Наш сайт"
+    },
+    "drawer_widget": {
+        "language": "Язык",
+        "contact_us": "Свяжитесь с нами"
+    }
+    ,
+    "video_player": {
+        "cannot_play": "Такого товара не найдено.",
+        "scan_cannot_play": "Такого товара не найдено. Пожалуйста, попробуйте ввести штрих-код вручную."
+        ,"ok": "OK"
+    }
+}

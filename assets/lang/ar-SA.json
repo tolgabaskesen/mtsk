@@ -1,0 +1,25 @@
+{
+    "language_screen": {
+        "title": "لغة",
+        "cancel": "إلغاء"
+    },
+    "home_screen": {
+        "scan_barcode_button_text": "مسح الرمز الشريطى",
+        "stop_video": "توقف الفيديو",
+        "write_barcode": "أدخل يدويًا",
+        "brands": "العلامات التجارية",
+        "info": "معلومات عنا",
+        "contact": "اتصال",
+        "web": "موقعنا على شبكة الإنترنت"
+    },
+    "drawer_widget": {
+        "language": "لغة",
+        "contact_us": "اتصل بنا"
+    }
+    ,
+    "video_player": {
+        "cannot_play": "لم يتم العثور على مثل هذا المنتج.",
+        "scan_cannot_play": "لم يتم العثور على مثل هذا المنتج. يرجى محاولة إدخال الباركود يدويًا."
+        ,"ok": "نعم"
+    }
+}
