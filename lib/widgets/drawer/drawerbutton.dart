@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mtsk/constants/colors.dart';
 
 class DrawerButton extends StatefulWidget {
   final String buttonText;
@@ -23,7 +24,7 @@ class _DrawerButtonState extends State<DrawerButton> {
         width: size.width * 0.5,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Color(0XFF217eaa), // background
+              primary: secondaryColor, // background
               onPrimary: Colors.white, // foreground
             ),
             onPressed: widget.buttonFunction,

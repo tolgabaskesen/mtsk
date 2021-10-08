@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mtsk/constants/colors.dart';
 import 'package:mtsk/init/generated/locale_keys.g.dart';
 import 'package:mtsk/widgets/language/languagebutton.dart';
 import 'drawerButton.dart';
@@ -22,12 +23,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
       width: size.width * 0.6,
       height: size.height,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            height: size.height * 0.2,
+            height: size.height * 0.05,
             width: size.width * 0.6,
             decoration: BoxDecoration(
-                color: Colors.grey.shade600,
+                color: secondaryColor,
                 borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(20),
                 )),
@@ -48,6 +50,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             height: size.height * 0.75,
             width: size.width * 0.6,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
                 LanguageButton(
                     pic: "turkey",
@@ -55,20 +58,35 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     upperID: "TR",
                     buttonText: "Türkçe"),
                 LanguageButton(
+                    pic: "arab",
+                    lowerID: "ar",
+                    upperID: "SA",
+                    buttonText: "Arabic"),
+                LanguageButton(
+                    pic: "russia",
+                    lowerID: "ch",
+                    upperID: "CH",
+                    buttonText: "Chinese"),
+                LanguageButton(
                     pic: "england",
                     lowerID: "en",
                     upperID: "US",
                     buttonText: "English"),
                 LanguageButton(
+                    pic: "russia",
+                    lowerID: "fs",
+                    upperID: "FS",
+                    buttonText: "Farsi"),
+                LanguageButton(
+                    pic: "russia",
+                    lowerID: "fr",
+                    upperID: "FR",
+                    buttonText: "French"),
+                LanguageButton(
                     pic: "germany",
                     lowerID: "de",
                     upperID: "DE",
                     buttonText: "German"),
-                LanguageButton(
-                    pic: "arab",
-                    lowerID: "ar",
-                    upperID: "SA",
-                    buttonText: "Arabic"),
                 LanguageButton(
                     pic: "russia",
                     lowerID: "ru",
@@ -81,7 +99,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             height: size.height * 0.05,
             width: size.width * 0.6,
             decoration: BoxDecoration(
-                color: Colors.grey.shade600,
+                color: secondaryColor,
                 borderRadius: const BorderRadius.only(
                   bottomRight: Radius.circular(20),
                 )),

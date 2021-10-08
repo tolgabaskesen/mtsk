@@ -21,7 +21,19 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         height: size.height,
         width: size.width,
-        color: primaryColor,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          stops: const [
+            0.1,
+            0.8,
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            secondaryColor,
+            thirdColor,
+          ],
+        )),
         padding: EdgeInsets.only(
             top: size.height * 0.05, left: 10, right: 10, bottom: 10),
         child: Column(
@@ -72,36 +84,36 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ustMenuItem(() {}, "Araç Tekniği Dersi", FontAwesomeIcons.home,
-                    Colors.red),
-                ustMenuItem(() {}, "Direksiyon Eğitimi", FontAwesomeIcons.home,
-                    Colors.orange),
-                ustMenuItem(() {}, "Genel Bilgiler", FontAwesomeIcons.home,
-                    Colors.green.shade800),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ustMenuItem(() {}, "İlk Yardım Dersi", FontAwesomeIcons.home,
-                    Colors.purple),
-                ustMenuItem(() {}, "Trafik Adabı Dersi", FontAwesomeIcons.home,
-                    Colors.green),
-                ustMenuItem(() {}, "Trafik ve Çevre Dersi",
-                    FontAwesomeIcons.home, Colors.cyan),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+                ustMenuItem(() {}, "Arama Motoru", FontAwesomeIcons.search,
+                    Colors.blue),
                 ustMenuItem(() {}, "Trafik İşaretleri ve Levhalar",
-                    FontAwesomeIcons.home, Colors.purple),
-                ustMenuItem(
-                    () {}, "Soru Bankası", FontAwesomeIcons.home, Colors.green),
-                ustMenuItem(() {}, "İlk Yardım Dersi", FontAwesomeIcons.home,
+                    FontAwesomeIcons.exclamationTriangle, Colors.red),
+                ustMenuItem(() {}, "Soru Bankası",
+                    FontAwesomeIcons.questionCircle, Colors.green),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ustMenuItem(() {}, "Araç Tekniği Dersi", FontAwesomeIcons.wrench,
+                    Colors.brown),
+                ustMenuItem(() {}, "Direksiyon Eğitimi",
+                    FontAwesomeIcons.carSide, Colors.deepPurple),
+                ustMenuItem(() {}, "Genel Bilgiler", FontAwesomeIcons.info,
                     Colors.cyan),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ustMenuItem(() {}, "İlk Yardım Dersi",
+                    FontAwesomeIcons.briefcaseMedical, Colors.red),
+                ustMenuItem(() {}, "Trafik Adabı Dersi",
+                    FontAwesomeIcons.trafficLight, Colors.green),
+                ustMenuItem(() {}, "Trafik ve Çevre Dersi",
+                    FontAwesomeIcons.road, Colors.indigo),
               ],
             ),
           ],
