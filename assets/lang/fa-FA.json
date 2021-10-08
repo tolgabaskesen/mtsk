@@ -1,0 +1,35 @@
+{
+    "language_screen": {
+        "title": "زبان",
+        "cancel": "لغو کنید"
+    },
+    "home_page": {
+        "home_screen": "صفحه نخست",
+        "read_qr": "QR Read",
+        "write_qr": "QR Write",
+        "brands": "مارک ها",
+        "info": "درباره ما",
+        "contact": "ارتباطات",
+        "exit_app": "خروج",
+        "mainitem_1" : "موتور جستجو",
+        "mainitem_2" : "علائم رانندگی",
+        "mainitem_3" : "بانک پرسش",
+        "mainitem_4" : "تکنیک خودرو",
+        "mainitem_5" : "آموزش فرمان",
+        "mainitem_6" : "اطلاعات کلی",
+        "mainitem_7" : "کمک های اولیه",
+        "mainitem_8" : "روشهای ترافیک",
+        "mainitem_9" : "ترافیک و محیط زیست",
+        "please_enter" : "لطفاً مقدار را وارد کنید"
+        
+    },
+    "drawer_widget": {
+        "language": "زبان",
+        "contact_us": "با ما تماس بگیرید"
+    },
+    "second_page": {
+        "website_error": "اتصال اینترنت خود را بررسی نمایید!",
+        "go_back": "برگرد",
+        "ok": "خوب"      
+    }
+}

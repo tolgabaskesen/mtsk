@@ -1,5 +1,7 @@
+import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:mtsk/constants/colors.dart';
+import 'package:mtsk/init/generated/locale_keys.g.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class SecondPage extends StatefulWidget {
@@ -15,7 +17,7 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Geri Dön"),
+        title: Text(LocaleKeys.second_page_go_back.tr()),
         backgroundColor: secondaryColor,
       ),
       body: WebView(
@@ -30,9 +32,9 @@ class _SecondPageState extends State<SecondPage> {
   showAlertDialog(BuildContext context) {
     // set up the button
     Widget okButton = TextButton(
-      child: const Text(
-        "Tamam",
-        style: TextStyle(color: Colors.white),
+      child: Text(
+        LocaleKeys.second_page_ok.tr(),
+        style: const TextStyle(color: Colors.white),
       ),
       onPressed: () {
         Navigator.pop(context);
@@ -43,11 +45,11 @@ class _SecondPageState extends State<SecondPage> {
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       title: const Text(
-        "HATA",
+        "!!!!",
         style: TextStyle(color: Colors.white),
       ),
-      content: const Text(
-        "İnternet bağlantınızı kontrol ediniz!",
+      content: Text(
+        LocaleKeys.second_page_website_error.tr(),
         style: const TextStyle(color: Colors.white),
       ),
       backgroundColor: Colors.grey.shade800,

@@ -22,57 +22,88 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> _key = GlobalKey();
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      drawer: const DrawerWidget(),
-      body: SingleChildScrollView(
-        child: Container(
-          height: size.height,
-          width: size.width,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-            stops: const [
-              0.1,
-              0.8,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              secondaryColor,
-              thirdColor,
-            ],
-          )),
-          padding: EdgeInsets.only(
-              top: size.height * 0.05, left: 10, right: 10, bottom: 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
+    return Consumer<LanguageNotifier>(builder: (context, lang, widget) {
+      return Scaffold(
+        drawer: const DrawerWidget(),
+        key: _key,
+        body: SingleChildScrollView(
+          child: Stack(
             children: [
-              /* Flexible(
-                flex: 3,
-                child: logoWidget(),
-              ), */
-              Flexible(
-                flex: 6,
-                child: menuWidet(),
+              Container(
+                height: size.height,
+                width: size.width,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  stops: const [
+                    0.1,
+                    0.8,
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    secondaryColor,
+                    thirdColor,
+                  ],
+                )),
+                padding: EdgeInsets.only(
+                    top: size.height * 0.05, left: 10, right: 10, bottom: 10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    /* Flexible(
+                    flex: 3,
+                    child: logoWidget(),
+                  ), */
+                    Flexible(
+                      flex: 6,
+                      child: menuWidet(),
+                    ),
+                    Flexible(
+                      flex: 3,
+                      child: qrWidget(),
+                    ),
+                    Flexible(
+                      flex: 2,
+                      child: altmenuWidget(),
+                    ),
+                  ],
+                ),
               ),
-              Flexible(
-                flex: 3,
-                child: qrWidget(),
-              ),
-              Flexible(
-                flex: 2,
-                child: altmenuWidget(),
+              Column(
+                children: [
+                  SizedBox(height: size.height * 0.57),
+                  GestureDetector(
+                    onTap: () {
+                      _key.currentState!.openDrawer();
+                    },
+                    child: Container(
+                      height: size.width * 0.13,
+                      width: size.width * 0.08,
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade500,
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                              bottomRight: Radius.circular(50),
+                              topRight: Radius.circular(50))),
+                      child: const Icon(Icons.arrow_forward_ios),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   Widget logoWidget() {
-    Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Container(
@@ -95,15 +126,16 @@ class _HomePageState extends State<HomePage> {
               children: [
                 ustMenuItem(() {
                   searchDialog(context);
-                }, "Arama Motoru", FontAwesomeIcons.search, Colors.blue),
+                }, LocaleKeys.home_page_mainitem_1.tr(),
+                    FontAwesomeIcons.search, Colors.blue),
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/isaretler");
-                }, "Trafik İşaretleri ve Levhalar",
+                }, LocaleKeys.home_page_mainitem_2.tr(),
                     FontAwesomeIcons.exclamationTriangle, Colors.red),
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/soru-bankasi");
-                }, "Soru Bankası", FontAwesomeIcons.questionCircle,
-                    Colors.green),
+                }, LocaleKeys.home_page_mainitem_3.tr(),
+                    FontAwesomeIcons.questionCircle, Colors.green),
               ],
             ),
             Row(
@@ -112,14 +144,16 @@ class _HomePageState extends State<HomePage> {
               children: [
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/arac-teknigi-dersi");
-                }, "Araç Tekniği Dersi", FontAwesomeIcons.wrench, Colors.brown),
+                }, LocaleKeys.home_page_mainitem_4.tr(),
+                    FontAwesomeIcons.wrench, Colors.brown),
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/direksiyon-egitimi");
-                }, "Direksiyon Eğitimi", FontAwesomeIcons.carSide,
-                    Colors.deepPurple),
+                }, LocaleKeys.home_page_mainitem_5.tr(),
+                    FontAwesomeIcons.carSide, Colors.deepPurple),
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/genel-bilgiler");
-                }, "Genel Bilgiler", FontAwesomeIcons.info, Colors.cyan),
+                }, LocaleKeys.home_page_mainitem_6.tr(), FontAwesomeIcons.info,
+                    Colors.cyan),
               ],
             ),
             Row(
@@ -128,15 +162,15 @@ class _HomePageState extends State<HomePage> {
               children: [
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/ilk-yardim-dersi");
-                }, "İlk Yardım Dersi", FontAwesomeIcons.briefcaseMedical,
-                    Colors.red),
+                }, LocaleKeys.home_page_mainitem_7.tr(),
+                    FontAwesomeIcons.briefcaseMedical, Colors.red),
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/trafik-adabi-dersi");
-                }, "Trafik Adabı Dersi", FontAwesomeIcons.trafficLight,
-                    Colors.green),
+                }, LocaleKeys.home_page_mainitem_8.tr(),
+                    FontAwesomeIcons.trafficLight, Colors.green),
                 ustMenuItem(() {
                   pageRouteMethod("https://mtsk.com.tr/trafik-ve-cevre-dersi");
-                }, "Trafik ve Çevre Dersi", FontAwesomeIcons.road,
+                }, LocaleKeys.home_page_mainitem_9.tr(), FontAwesomeIcons.road,
                     Colors.indigo),
               ],
             ),
@@ -156,10 +190,12 @@ class _HomePageState extends State<HomePage> {
           children: [
             qrItem(() {
               scanBarcodeNormal();
-            }, "QR Okut", FontAwesomeIcons.qrcode, Colors.black),
+            }, LocaleKeys.home_page_read_qr.tr(), FontAwesomeIcons.qrcode,
+                Colors.black),
             qrItem(() {
               showAlertDialog(context);
-            }, "QR Yaz", FontAwesomeIcons.pencilAlt, Colors.black),
+            }, LocaleKeys.home_page_write_qr.tr(), FontAwesomeIcons.pencilAlt,
+                Colors.black),
           ],
         ),
       ),
@@ -175,16 +211,20 @@ class _HomePageState extends State<HomePage> {
           children: [
             altMenuItem(() {
               pageRouteMethod("https://mtsk.com.tr");
-            }, "Ana Sayfa", FontAwesomeIcons.home, Colors.grey.shade700),
+            }, LocaleKeys.home_page_home_screen.tr(), FontAwesomeIcons.home,
+                Colors.grey.shade700),
             altMenuItem(() {
               pageRouteMethod("https://mtsk.com.tr/hakkimizda");
-            }, "Hakkımızda", FontAwesomeIcons.info, Colors.grey.shade700),
+            }, LocaleKeys.home_page_info.tr(), FontAwesomeIcons.info,
+                Colors.grey.shade700),
             altMenuItem(() {
               pageRouteMethod("https://mtsk.com.tr/iletisim");
-            }, "İletişim", FontAwesomeIcons.phone, Colors.grey.shade700),
+            }, LocaleKeys.home_page_info.tr(), FontAwesomeIcons.phone,
+                Colors.grey.shade700),
             altMenuItem(() {
               SystemNavigator.pop();
-            }, "Çıkış", FontAwesomeIcons.powerOff, Colors.grey.shade700),
+            }, LocaleKeys.home_page_exit_app.tr(), FontAwesomeIcons.powerOff,
+                Colors.grey.shade700),
           ],
         ),
       ),
@@ -217,9 +257,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 wrapWords: false,
                 textAlign: TextAlign.center,
-                maxLines: 3,
-                maxFontSize: 17,
-                minFontSize: 10,
+                maxLines: 2,
+                maxFontSize: 15,
+                minFontSize: 8,
               ),
             ),
           ],
@@ -283,8 +323,8 @@ class _HomePageState extends State<HomePage> {
       Function()? onPressed, String text, IconData icon, Color color) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.width * 0.20,
-      width: size.width * 0.20,
+      height: size.width * 0.22,
+      width: size.width * 0.22,
       child: Column(
         children: [
           ElevatedButton(
@@ -310,9 +350,10 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
+              wrapWords: false,
               maxLines: 1,
-              maxFontSize: 16,
-              minFontSize: 10,
+              maxFontSize: 15,
+              minFontSize: 8,
             ),
           ),
         ],
@@ -326,13 +367,13 @@ class _HomePageState extends State<HomePage> {
   Future<void> scanBarcodeNormal() async {
     try {
       barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-          '#ff6666', 'Cancel', true, ScanMode.BARCODE);
+          '#ff6666', 'OK', true, ScanMode.BARCODE);
       barcodeScanRes = "https://mtsk.com.tr/makale/$barcodeScanRes";
       print(barcodeScanRes);
       pageRouteMethod(barcodeScanRes);
     } on PlatformException {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text("Lütfen tekrar deneyiniz.."),
+        content: Text("!!!!"),
       ));
     }
     if (!mounted) return;
@@ -375,13 +416,14 @@ class _HomePageState extends State<HomePage> {
                                 pageRouteMethod(url);
                               } else {
                                 ScaffoldMessenger.of(context)
-                                    .showSnackBar(const SnackBar(
-                                  content: Text("Lütfen bir değer giriniz!"),
+                                    .showSnackBar(SnackBar(
+                                  content: Text(
+                                      LocaleKeys.home_page_please_enter.tr()),
                                 ));
                               }
                             },
                             child:
-                                AutoSizeText(LocaleKeys.video_player_ok.tr())),
+                                AutoSizeText(LocaleKeys.second_page_ok.tr())),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Color(0XFF217eaa), // background
@@ -443,7 +485,7 @@ class _HomePageState extends State<HomePage> {
                               }
                             },
                             child:
-                                AutoSizeText(LocaleKeys.video_player_ok.tr())),
+                                AutoSizeText(LocaleKeys.second_page_ok.tr())),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Color(0XFF217eaa), // background

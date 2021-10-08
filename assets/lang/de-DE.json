@@ -1,24 +1,35 @@
 {
     "language_screen": {
         "title": "Sprache",
-        "cancel": "Stornieren"
+        "cancel": "Abbrechen"
     },
-    "home_screen": {
-        "scan_barcode_button_text": "Barcode Scannen",
-        "stop_video": "Video Stoppen",
-        "write_barcode": "Manuell eintragen",
+    "home_page": {
+        "home_screen": "Startseite",
+        "read_qr": "QR Lesen",
+        "write_qr": "QR schreiben",
         "brands": "Marken",
         "info": "über uns",
-        "contact": "Kontakt",
-        "web": "Unsere Internetseite"
+        "contact": "Kommunikation",
+        "exit_app": "Ausgang",
+        "mainitem_1" : "Suchmaschine",
+        "mainitem_2" : "Verkehrszeichen und Schilder",
+        "mainitem_3" : "Fragendatenbank",
+        "mainitem_4" : "Fahrzeugtechnik-Lektion",
+        "mainitem_5" : "Lenkungstraining",
+        "mainitem_6" : "Allgemeine Informationen",
+        "mainitem_7" : "Erste-Hilfe-Lektion",
+        "mainitem_8" : "Verkehrskundeunterricht",
+        "mainitem_9" : "Verkehrs- und Umweltunterricht",
+        "please_enter" : "Bitte Wert eingeben"
+        
     },
     "drawer_widget": {
         "language": "Sprache",
         "contact_us": "Kontaktiere uns"
     },
-    "video_player": {
-        "cannot_play": "Kein solches Produkt gefunden.",
-        "scan_cannot_play": "Kein solches Produkt gefunden. Bitte versuchen Sie, den Barcode manuell einzugeben.",
-        "ok": "OK"
+    "second_page": {
+        "website_error": "Prüfe deine Internetverbindung!",
+        "go_back": "Kehre um",
+        "ok": "OK"      
     }
 }

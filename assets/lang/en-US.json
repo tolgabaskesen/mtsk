@@ -3,22 +3,32 @@
         "title": "Language",
         "cancel": "Cancel"
     },
-    "home_screen": {
-        "scan_barcode_button_text": "Scan Barcode",
-        "stop_video": "Stop Video",
-        "write_barcode": "Write Barcode",
-        "brands": "Brands",
+    "home_page": {
+        "home_screen": "Home Page",
+        "read_qr": "QR Scan",
+        "write_qr": "QR Write",
         "info": "Info",
         "contact": "Contact",
-        "web": "Web Site"
+        "exit_app": "Exit",
+        "mainitem_1" : "Search",
+        "mainitem_2" : "Traffic Signs and Signs",
+        "mainitem_3" : "Question Bank",
+        "mainitem_4" : "Vehicle Technique Lesson",
+        "mainitem_5" : "Steering Training",
+        "mainitem_6" : "General Information",
+        "mainitem_7" : "First Aid Lesson",
+        "mainitem_8" : "Traffic Manners Lesson",
+        "mainitem_9" : "Traffic and Environment Lesson",
+        "please_enter" : "Please Enter Value"
+        
     },
     "drawer_widget": {
         "language": "Language",
-        "contact_us": "Contact Us"
+        "contact_us": "Contact us"
     },
-    "video_player": {
-        "cannot_play": "No such product found.",
-        "scan_cannot_play": "No such product found. Please try to enter the barcode manually."
-        ,"ok": "OK"
+    "second_page": {
+        "website_error": "Please check the internet connection!",
+        "go_back": "Go Back",
+        "ok": "OK"      
     }
 }

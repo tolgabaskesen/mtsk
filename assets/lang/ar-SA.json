@@ -1,25 +1,35 @@
 {
     "language_screen": {
         "title": "لغة",
-        "cancel": "إلغاء"
+        "cancel": "يلغي"
     },
-    "home_screen": {
-        "scan_barcode_button_text": "مسح الرمز الشريطى",
-        "stop_video": "توقف الفيديو",
-        "write_barcode": "أدخل يدويًا",
+    "home_page": {
+        "home_screen": "الصفحة الرئيسية",
+        "read_qr": "قراءة QR",
+        "write_qr": "اكتب QR",
         "brands": "العلامات التجارية",
         "info": "معلومات عنا",
-        "contact": "اتصال",
-        "web": "موقعنا على شبكة الإنترنت"
+        "contact": "تواصل",
+        "exit_app": "مخرج",
+        "mainitem_1" : "محرك البحث",
+        "mainitem_2" : "اشارات حركة المرور",
+        "mainitem_3" : "بنك الأسئلة",
+        "mainitem_4" : "تقنية السيارة",
+        "mainitem_5" : "تدريب التوجيه",
+        "mainitem_6" : "معلومات عامة",
+        "mainitem_7" : "الإسعافات الأولية",
+        "mainitem_8" : "آداب المرور",
+        "mainitem_9" : "المرور والبيئة",
+        "please_enter" : "الرجاء إدخال القيمة"
+        
     },
     "drawer_widget": {
         "language": "لغة",
         "contact_us": "اتصل بنا"
-    }
-    ,
-    "video_player": {
-        "cannot_play": "لم يتم العثور على مثل هذا المنتج.",
-        "scan_cannot_play": "لم يتم العثور على مثل هذا المنتج. يرجى محاولة إدخال الباركود يدويًا."
-        ,"ok": "نعم"
+    },
+    "second_page": {
+        "website_error": "يرجى التحقق من اتصال الإنترنت!",
+        "go_back": "عد",
+        "ok": "OK"      
     }
 }

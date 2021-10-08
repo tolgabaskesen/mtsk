@@ -1,3 +1,6 @@
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:easy_localization/src/public_ext.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mtsk/constants/colors.dart';
 import 'package:mtsk/init/generated/locale_keys.g.dart';
@@ -26,7 +29,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            height: size.height * 0.05,
+            height: size.height * 0.2,
             width: size.width * 0.6,
             decoration: BoxDecoration(
                 color: secondaryColor,
@@ -37,14 +40,20 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  height: size.height * 0.13,
-                  width: size.width * 0.35,
-                  alignment: Alignment.center,
-                  /* child: Image.asset(
-                    "assets/images/bvLOGO2.png",
-                    fit: BoxFit.fill,
-                  ), */
-                )),
+                    height: size.height * 0.13,
+                    width: size.width * 0.35,
+                    alignment: Alignment.bottomRight,
+                    child: AutoSizeText(
+                      LocaleKeys.language_screen_title.tr(),
+                      maxFontSize: 45,
+                      wrapWords: false,
+                      minFontSize: 25,
+                      maxLines: 1,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.right,
+                    ))),
           ),
           Container(
             height: size.height * 0.75,
@@ -64,8 +73,8 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     buttonText: "Arabic"),
                 LanguageButton(
                     pic: "russia",
-                    lowerID: "ch",
-                    upperID: "CH",
+                    lowerID: "zh",
+                    upperID: "ZH",
                     buttonText: "Chinese"),
                 LanguageButton(
                     pic: "england",
@@ -74,8 +83,8 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     buttonText: "English"),
                 LanguageButton(
                     pic: "russia",
-                    lowerID: "fs",
-                    upperID: "FS",
+                    lowerID: "fa",
+                    upperID: "FA",
                     buttonText: "Farsi"),
                 LanguageButton(
                     pic: "russia",

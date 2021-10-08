@@ -38,9 +38,15 @@ class _LanguageButtonState extends State<LanguageButton> {
               borderRadius: BorderRadius.circular(18.0),
             ),
           ),
-          onPressed: () {
+          onPressed: () async {
+            await context.setLocale(Locale(widget.lowerID, widget.upperID));
+            await langProvider.setLanguageStatus(1);
+            await langProvider.setAllLanguage(
+                Locale(widget.lowerID, widget.upperID), widget.lowerID);
+            BaseSharedPrefHelper.instance
+                .setStringValue("deviceLang", widget.lowerID);
             setState(() {
-              context.locale = Locale(widget.lowerID, widget.upperID);
+              context.setLocale(Locale(widget.lowerID, widget.upperID));
               langProvider.setLanguageStatus(1);
               langProvider.setAllLanguage(
                   Locale(widget.lowerID, widget.upperID), widget.lowerID);

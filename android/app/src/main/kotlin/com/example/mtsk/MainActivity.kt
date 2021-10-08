@@ -1,4 +1,4 @@
-package com.example.mtsk
+package com.mtsk.app
 
 import io.flutter.embedding.android.FlutterActivity
 

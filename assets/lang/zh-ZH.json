@@ -1,0 +1,34 @@
+{
+    "language_screen": {
+        "title": "语",
+        "cancel": "取消"
+    },
+    "home_page": {
+        "home_screen": "主页",
+        "read_qr": "二维码阅读",
+        "write_qr": "写二维码",
+        "brands": "品牌",
+        "info": "关于我们",
+        "contact": "沟通",
+        "exit_app": "出口",
+        "mainitem_1": "搜索引擎",
+        "mainitem_2": "交通标志和标志",
+        "mainitem_3": "题库",
+        "mainitem_4": "车辆技术课",
+        "mainitem_5": "转向训练",
+        "mainitem_6": "一般信息",
+        "mainitem_7": "急救课",
+        "mainitem_8": "交通礼仪课",
+        "mainitem_9": "交通与环境课",
+        "please_enter": "请输入值"
+    },
+    "drawer_widget": {
+        "language": "语",
+        "contact_us": "联系我们"
+    },
+    "second_page": {
+        "website_error": "检查您的互联网连接!",
+        "go_back": "回头",
+        "ok": "好的"
+    }
+}

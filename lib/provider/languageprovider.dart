@@ -14,7 +14,7 @@ class LanguageNotifier with ChangeNotifier {
               : BaseSharedPrefHelper.instance.getStringValue("deviceLang") ==
                       "ru"
                   ? const Locale("ru", "RU")
-                  : const Locale("ar", "SA");
+                  : const Locale("tr", "TR");
   // ignore: todo
   // TODO::ŞİMDİLİK DEFAULT DİL TR YOLLANIYOR EN SON TELEFONUN DİLİ ALINACAK
   Locale get getLanguage => _setLanguage;
