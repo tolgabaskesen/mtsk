@@ -21,6 +21,7 @@ abstract class  LocaleKeys {
   static const home_page_mainitem_8 = 'home_page.mainitem_8';
   static const home_page_mainitem_9 = 'home_page.mainitem_9';
   static const home_page_please_enter = 'home_page.please_enter';
+  static const home_page_siparis = 'home_page.siparis';
   static const home_page = 'home_page';
   static const drawer_widget_language = 'drawer_widget.language';
   static const drawer_widget_contact_us = 'drawer_widget.contact_us';

@@ -19,7 +19,8 @@
         "mainitem_7" : "First Aid Lesson",
         "mainitem_8" : "Traffic Manners Lesson",
         "mainitem_9" : "Traffic and Environment Lesson",
-        "please_enter" : "Please Enter Value"
+        "please_enter" : "Please Enter Value",
+        "siparis" : "Order"
         
     },
     "drawer_widget": {

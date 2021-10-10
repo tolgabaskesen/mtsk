@@ -20,7 +20,8 @@
         "mainitem_7" : "Erste-Hilfe-Lektion",
         "mainitem_8" : "Verkehrskundeunterricht",
         "mainitem_9" : "Verkehrs- und Umweltunterricht",
-        "please_enter" : "Bitte Wert eingeben"
+        "please_enter" : "Bitte Wert eingeben",
+        "siparis" : "Befehl"
         
     },
     "drawer_widget": {

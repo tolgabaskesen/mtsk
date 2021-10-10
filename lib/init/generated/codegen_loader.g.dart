@@ -36,7 +36,8 @@ class CodegenLoader extends AssetLoader{
     "mainitem_7": "الإسعافات الأولية",
     "mainitem_8": "آداب المرور",
     "mainitem_9": "المرور والبيئة",
-    "please_enter": "الرجاء إدخال القيمة"
+    "please_enter": "الرجاء إدخال القيمة",
+    "siparis": "طلب"
   },
   "drawer_widget": {
     "language": "لغة",
@@ -70,7 +71,8 @@ static const Map<String,dynamic> de_DE = {
     "mainitem_7": "Erste-Hilfe-Lektion",
     "mainitem_8": "Verkehrskundeunterricht",
     "mainitem_9": "Verkehrs- und Umweltunterricht",
-    "please_enter": "Bitte Wert eingeben"
+    "please_enter": "Bitte Wert eingeben",
+    "siparis": "Befehl"
   },
   "drawer_widget": {
     "language": "Sprache",
@@ -103,7 +105,8 @@ static const Map<String,dynamic> en_US = {
     "mainitem_7": "First Aid Lesson",
     "mainitem_8": "Traffic Manners Lesson",
     "mainitem_9": "Traffic and Environment Lesson",
-    "please_enter": "Please Enter Value"
+    "please_enter": "Please Enter Value",
+    "siparis": "Order"
   },
   "drawer_widget": {
     "language": "Language",
@@ -137,7 +140,8 @@ static const Map<String,dynamic> fa_FA = {
     "mainitem_7": "کمک های اولیه",
     "mainitem_8": "روشهای ترافیک",
     "mainitem_9": "ترافیک و محیط زیست",
-    "please_enter": "لطفاً مقدار را وارد کنید"
+    "please_enter": "لطفاً مقدار را وارد کنید",
+    "siparis": "سفارش"
   },
   "drawer_widget": {
     "language": "زبان",
@@ -171,7 +175,8 @@ static const Map<String,dynamic> fr_FR = {
     "mainitem_7": "Premiers secours",
     "mainitem_8": "Modes de circulation",
     "mainitem_9": "Circulation et environnement",
-    "please_enter": "Veuillez saisir une valeur"
+    "please_enter": "Veuillez saisir une valeur",
+    "siparis": "Ordre"
   },
   "drawer_widget": {
     "language": "Langue",
@@ -205,7 +210,8 @@ static const Map<String,dynamic> ru_RU = {
     "mainitem_7": "урок первой помощи",
     "mainitem_8": "Правила дорожного движения",
     "mainitem_9": "Транспорт и окружающая среда",
-    "please_enter": "Пожалуйста, введите значение"
+    "please_enter": "Пожалуйста, введите значение",
+    "siparis": "порядок"
   },
   "drawer_widget": {
     "language": "Язык",
@@ -239,7 +245,8 @@ static const Map<String,dynamic> tr_TR = {
     "mainitem_7": "İlk Yardım Dersi",
     "mainitem_8": "Trafik Adabı Dersi",
     "mainitem_9": "Trafik ve Çevre Dersi",
-    "please_enter": "Lütfen Değer Giriniz"
+    "please_enter": "Lütfen Değer Giriniz",
+    "siparis": "Sipariş"
   },
   "drawer_widget": {
     "language": "Dil",
@@ -273,7 +280,8 @@ static const Map<String,dynamic> zh_ZH = {
     "mainitem_7": "急救课",
     "mainitem_8": "交通礼仪课",
     "mainitem_9": "交通与环境课",
-    "please_enter": "请输入值"
+    "please_enter": "请输入值",
+    "siparis": "命令"
   },
   "drawer_widget": {
     "language": "语",

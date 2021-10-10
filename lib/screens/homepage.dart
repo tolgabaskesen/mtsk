@@ -50,23 +50,20 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(
                     top: size.height * 0.05, left: 10, right: 10, bottom: 10),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     /* Flexible(
-                    flex: 3,
-                    child: logoWidget(),
-                  ), */
-                    Flexible(
                       flex: 6,
-                      child: menuWidet(),
-                    ),
-                    Flexible(
-                      flex: 3,
+                      child: menuWidet(), //YEDEK SAYFA OLARAK DURACAK
+                    ), */
+                    Container(
+                      height: size.height * 0.70,
+                      alignment: Alignment.center,
                       child: qrWidget(),
                     ),
-                    Flexible(
-                      flex: 2,
+                    Container(
+                      height: size.height * 0.22,
                       child: altmenuWidget(),
                     ),
                   ],
@@ -129,11 +126,11 @@ class _HomePageState extends State<HomePage> {
                 }, LocaleKeys.home_page_mainitem_1.tr(),
                     FontAwesomeIcons.search, Colors.blue),
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/isaretler");
+                  pageRouteMethod("https://mtsk.com.tr/isaretler", "normal");
                 }, LocaleKeys.home_page_mainitem_2.tr(),
                     FontAwesomeIcons.exclamationTriangle, Colors.red),
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/soru-bankasi");
+                  pageRouteMethod("https://mtsk.com.tr/soru-bankasi", "normal");
                 }, LocaleKeys.home_page_mainitem_3.tr(),
                     FontAwesomeIcons.questionCircle, Colors.green),
               ],
@@ -143,15 +140,18 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/arac-teknigi-dersi");
+                  pageRouteMethod(
+                      "https://mtsk.com.tr/arac-teknigi-dersi", "normal");
                 }, LocaleKeys.home_page_mainitem_4.tr(),
                     FontAwesomeIcons.wrench, Colors.brown),
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/direksiyon-egitimi");
+                  pageRouteMethod(
+                      "https://mtsk.com.tr/direksiyon-egitimi", "normal");
                 }, LocaleKeys.home_page_mainitem_5.tr(),
                     FontAwesomeIcons.carSide, Colors.deepPurple),
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/genel-bilgiler");
+                  pageRouteMethod(
+                      "https://mtsk.com.tr/genel-bilgiler", "normal");
                 }, LocaleKeys.home_page_mainitem_6.tr(), FontAwesomeIcons.info,
                     Colors.cyan),
               ],
@@ -161,15 +161,18 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/ilk-yardim-dersi");
+                  pageRouteMethod(
+                      "https://mtsk.com.tr/ilk-yardim-dersi", "normal");
                 }, LocaleKeys.home_page_mainitem_7.tr(),
                     FontAwesomeIcons.briefcaseMedical, Colors.red),
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/trafik-adabi-dersi");
+                  pageRouteMethod(
+                      "https://mtsk.com.tr/trafik-adabi-dersi", "normal");
                 }, LocaleKeys.home_page_mainitem_8.tr(),
                     FontAwesomeIcons.trafficLight, Colors.green),
                 ustMenuItem(() {
-                  pageRouteMethod("https://mtsk.com.tr/trafik-ve-cevre-dersi");
+                  pageRouteMethod(
+                      "https://mtsk.com.tr/trafik-ve-cevre-dersi", "normal");
                 }, LocaleKeys.home_page_mainitem_9.tr(), FontAwesomeIcons.road,
                     Colors.indigo),
               ],
@@ -189,7 +192,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             qrItem(() {
-              scanBarcodeNormal();
+              scanBarcodeNormal("read");
             }, LocaleKeys.home_page_read_qr.tr(), FontAwesomeIcons.qrcode,
                 Colors.black),
             qrItem(() {
@@ -210,16 +213,16 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             altMenuItem(() {
-              pageRouteMethod("https://mtsk.com.tr");
-            }, LocaleKeys.home_page_home_screen.tr(), FontAwesomeIcons.home,
+              pageRouteMethod("https://mtsk.com.tr/siparis", "normal");
+            }, LocaleKeys.home_page_siparis.tr(), FontAwesomeIcons.shoppingCart,
                 Colors.grey.shade700),
             altMenuItem(() {
-              pageRouteMethod("https://mtsk.com.tr/hakkimizda");
+              pageRouteMethod("https://mtsk.com.tr/hakkimizda", "normal");
             }, LocaleKeys.home_page_info.tr(), FontAwesomeIcons.info,
                 Colors.grey.shade700),
             altMenuItem(() {
-              pageRouteMethod("https://mtsk.com.tr/iletisim");
-            }, LocaleKeys.home_page_info.tr(), FontAwesomeIcons.phone,
+              pageRouteMethod("https://mtsk.com.tr/iletisim", "normal");
+            }, LocaleKeys.home_page_contact.tr(), FontAwesomeIcons.phone,
                 Colors.grey.shade700),
             altMenuItem(() {
               SystemNavigator.pop();
@@ -364,13 +367,15 @@ class _HomePageState extends State<HomePage> {
   String? videourl;
   String scanBarcode = 'Unknown';
   String barcodeScanRes = "";
-  Future<void> scanBarcodeNormal() async {
+  Future<void> scanBarcodeNormal(String type) async {
     try {
-      barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-          '#ff6666', 'OK', true, ScanMode.BARCODE);
-      barcodeScanRes = "https://mtsk.com.tr/makale/$barcodeScanRes";
+      barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666',
+          LocaleKeys.language_screen_cancel.tr(), true, ScanMode.BARCODE);
       print(barcodeScanRes);
-      pageRouteMethod(barcodeScanRes);
+      if (barcodeScanRes != "-1" && barcodeScanRes != "") {
+        barcodeScanRes = "https://mtsk.com.tr/makale/$barcodeScanRes";
+        pageRouteMethod(barcodeScanRes, type);
+      }
     } on PlatformException {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text("!!!!"),
@@ -413,7 +418,7 @@ class _HomePageState extends State<HomePage> {
                               if (url != "") {
                                 url = "https://mtsk.com.tr/makale/$url";
                                 Navigator.pop(context);
-                                pageRouteMethod(url);
+                                pageRouteMethod(url, "write");
                               } else {
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(SnackBar(
@@ -476,7 +481,7 @@ class _HomePageState extends State<HomePage> {
                               if (url != "") {
                                 url = "https://mtsk.com.tr/?source=kb&s=$url";
                                 Navigator.pop(context);
-                                pageRouteMethod(url);
+                                pageRouteMethod(url, "write");
                               } else {
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(const SnackBar(
@@ -504,12 +509,13 @@ class _HomePageState extends State<HomePage> {
         });
   }
 
-  pageRouteMethod(String url) {
+  pageRouteMethod(String url, String type) {
     Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => SecondPage(
                   pageRoute: url,
+                  pageType: type,
                 )));
   }
 }

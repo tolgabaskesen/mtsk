@@ -20,7 +20,8 @@
         "mainitem_7": "急救课",
         "mainitem_8": "交通礼仪课",
         "mainitem_9": "交通与环境课",
-        "please_enter": "请输入值"
+        "please_enter": "请输入值",
+        "siparis": "命令"
     },
     "drawer_widget": {
         "language": "语",

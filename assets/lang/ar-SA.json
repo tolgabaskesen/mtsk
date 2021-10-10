@@ -20,7 +20,8 @@
         "mainitem_7" : "الإسعافات الأولية",
         "mainitem_8" : "آداب المرور",
         "mainitem_9" : "المرور والبيئة",
-        "please_enter" : "الرجاء إدخال القيمة"
+        "please_enter" : "الرجاء إدخال القيمة",
+        "siparis" : "طلب"
         
     },
     "drawer_widget": {

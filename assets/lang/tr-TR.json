@@ -20,7 +20,8 @@
         "mainitem_7" : "İlk Yardım Dersi",
         "mainitem_8" : "Trafik Adabı Dersi",
         "mainitem_9" : "Trafik ve Çevre Dersi",
-        "please_enter" : "Lütfen Değer Giriniz"
+        "please_enter" : "Lütfen Değer Giriniz",
+        "siparis" : "Sipariş"
         
     },
     "drawer_widget": {

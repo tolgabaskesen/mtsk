@@ -11,17 +11,17 @@
         "info": "à propos de nous",
         "contact": "la communication",
         "exit_app": "Sortir",
-        "mainitem_1" : "Moteur de recherche",
-        "mainitem_2" : "Panneaux de signalisation",
-        "mainitem_3" : "Banque de questions",
-        "mainitem_4" : "Technique du véhicule",
-        "mainitem_5" : "Formation de pilotage",
-        "mainitem_6" : "Informations générales",
-        "mainitem_7" : "Premiers secours",
-        "mainitem_8" : "Modes de circulation",
-        "mainitem_9" : "Circulation et environnement",
-        "please_enter" : "Veuillez saisir une valeur"
-        
+        "mainitem_1": "Moteur de recherche",
+        "mainitem_2": "Panneaux de signalisation",
+        "mainitem_3": "Banque de questions",
+        "mainitem_4": "Technique du véhicule",
+        "mainitem_5": "Formation de pilotage",
+        "mainitem_6": "Informations générales",
+        "mainitem_7": "Premiers secours",
+        "mainitem_8": "Modes de circulation",
+        "mainitem_9": "Circulation et environnement",
+        "please_enter": "Veuillez saisir une valeur",
+        "siparis": "Ordre"
     },
     "drawer_widget": {
         "language": "Langue",
@@ -30,6 +30,6 @@
     "second_page": {
         "website_error": "Vérifiez votre connection internet!",
         "go_back": "Faire demi-tour",
-        "ok": "OK"      
+        "ok": "OK"
     }
 }
