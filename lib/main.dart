@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
       return MaterialApp(
         localizationsDelegates: context.localizationDelegates,
         debugShowCheckedModeBanner: false,
-        title: 'myNote',
+        title: 'MTSK - Akıllı Kartlar',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
